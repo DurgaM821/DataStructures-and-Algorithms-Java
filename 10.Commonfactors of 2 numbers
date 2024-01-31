@@ -1,0 +1,80 @@
+
+/*
+Q5 - Sum of Round Numbers
+Problem Link: https://codeforces.com/contest/1352/problem/A
+
+Input--->
+
+5
+5009
+7
+9876
+10000
+10
+
+
+output-->
+
+2<---(size)
+5000 9 <--(addends)
+1
+7 
+4
+800 70 6 9000 
+1
+10000 
+1
+10 
+
+
+
+
+
+*/
+
+
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		int i=1;
+		int a=25;
+		int b=30;
+        int count=0;
+        while(i>0){
+            if(a%i == 0 && b%i==0){
+                count=count+1;
+                }
+            i++;
+        }
+        System.out.print(count);
+		}
+		
+		
+	}
+	
+	
+	
+	/**************************************optimized code***********/
+	
+/* https://leetcode.com/problems/number-of-common-factors*/
+
+/*class Solution {
+
+	   /*Basic idea is Common factors of both numbers will 
+   be upto smaller number only. Therfore iterated upto 
+   minm of these two, and checked whether the number is 
+   factor of both or not.*/  
+
+  /*  public int commonFactors(int a, int b) {
+        int count = 0;
+        int n = Math.min(a,b);
+        for(int i = 1; i<n+1;i++){
+            if(a%i == 0 && b%i == 0) count++;
+        }
+        return count;
+    }
+} */
+
