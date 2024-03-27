@@ -1,0 +1,40 @@
+
+
+/*   *********************character pattern***************************
+Input: 4
+
+output:
+ABCD
+BCDE
+CDEF
+DEFG
+*/
+
+
+
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    
+	    int i=1;
+	   
+	    while(i<=n){
+	        int j=1;
+	         int p=i;
+	        while(j<=n){
+	            char jthchar= (char)('A'+p-1);  // typecasting to char of the ASCII val
+	            System.out.print(jthchar);
+	            p=p+1;
+	            j++;
+	            
+	        }
+	        System.out.println();
+	        i++;
+	    }
+		
+	}
+}
